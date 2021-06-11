@@ -1,0 +1,78 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script>
+            function math()
+            {
+                var weight=document.getElementById('weight').value;
+                var height=document.getElementById('height').value;
+                document.getElementById('result').value= weight/((height/100)**2);
+            }
+    </script>
+    <style>
+            .span01
+            {
+              font-size: 25px;
+            }
+            .div02
+            {
+              width: 40%;
+              margin-left: 30%;
+              padding-top: 15px;
+              padding-bottom :15px ;
+              border: 3px dotted;
+            }
+            .span02
+            {
+                font-family: "新細明體";
+                font-size:17px;
+            }
+    </style>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1 style="text-align:center;">Hello, world!</h1>
+    <div class="container-fluid">
+       <div class="row">
+            <div class="col-sm-4">
+                test01
+            </div>
+            <div class="col-sm-8">
+                <main style="text-align: center;">
+                    <div class="div02" style="border-color: black;">    
+                        <span class="span01" style="font-family:標楷體;">BMI計算公式:</span>
+                        <span style="font-size: 20px;">BMI=體重(公斤)/身高^2(公尺^2)</span>
+                        <span style="display: block;color: brown;">體重正常範圍為BMI=18.5~24</span>
+                    </div>
+                    <br>
+                    <div class="div02" style="border-color:  indianred;">
+                        <span style="display: block;">
+                            <span class="span01" style="font-family: 標楷體;">您的BMI值為:</span>
+                            <br><br>
+                            <p>體重(kg):
+                            <input type="text" id="weight" name="weight"></p>
+                            <p>身高(cm):
+                            <input type="text" id="height" name="height"></p>
+                            <p><button onclick="math()">計算</button></p>
+                            <p>BMI:<input type="text" id="result"></output></p>
+                        </span>
+                    </div>
+                    <br>
+                    <div class="div02" style="border:none;">
+                        <img src="https://9akztym15btiu59v3hfw4w-on.drv.tw/HW-06/123.png" alt="BMI圖">
+                    </div>
+                </main> 
+            </div>
+       </div>
+       <br><br>
+
+    </div>
+  </body>
+</html>
