@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script>
+      function math()
+      {
+       var weight=document.getElementById('weight').value;
+       var height=document.getElementById('height').value;
+       document.getElementById('result').value= weight/((height/100)**2);
+      }
+    </script>
+    <style>
+      .p01
+       {
+         width:25%;
+         display:inline-block;
+       }
+      .span01
+       {
+         font-size: 25px;
+       }
+      .div02
+       {
+         width: 90%;
+         margin-left: 5%;
+         padding-top: 15px;
+         padding-bottom :15px ;
+         border: 3px dotted;
+       }
+      .span02
+       {
+         font-family: "新細明體";
+         font-size:17px;
+       }
+    </style>
+  </head>
+  <body background="https://static.vecteezy.com/system/resources/previews/000/132/691/original/white-wood-background-vector.jpg"  >
+   <header>
+     <div class="container-fluid">
+       <div class="text-center text-warning border border-primary bg-dark">
+         BMI計算
+       </div>
+     </div>
+   </header>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://gbwade.github.io/test/HW10.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://health99.hpa.gov.tw/onlineQuiz/bmi">相關連結</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+   </nav>
+   <main>
+     <div class="container-fluid">
+       <div class="row">
+         <div class="col-sm-12">
+          <div class="text-center div02">     
+            <span class="span01" style="font-family:標楷體;">BMI計算公式:</span>
+            <span style="font-size: 20px;">BMI=體重(公斤)/身高^2(公尺^2)</span>
+            <span style="display: block;color: brown;">體重正常範圍為BMI=18.5~24</span>
+          </div>
+         </div>
+        </div>
+       </div>
+     <br><br>
+     <div class="container-fluid">
+       <div class="row">
+         <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">
+                  第一種作法
+                </h4>
+                <p class="card-text">
+                  <div class="div02" style="border-color:  indianred;margin-button:10px;">
+                    <span style="display: block;">
+                      <span class="span01" style="font-family: 標楷體;">您的BMI值為:</span>
+                      <br><br>
+                      <form oninput="result.value=parseInt(weight.value)/(parseFloat(height.value/100)**2)">
+                        <span class="span02">體重(kg):</span>
+                        <input type="text" id="weight" >&nbsp;&nbsp;&nbsp;/&nbsp;
+                        <span class="span02">身高(cm):</span>
+                        <input type="text" id="height" > ^2&nbsp;=
+                        <output name="result" for="weight height"></output>
+                     </form>
+                     <br>
+                    </span>
+                  </div>
+                </p>
+              </div>
+            </div>
+         </div>
+         <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">
+                  第二種作法
+                </h4>
+                <p class="card-text">
+                  <div class="div02" style="border-color:  indianred;">
+                    <span style="display: block;">
+                      <span class="span01" style="font-family: 標楷體;">您的BMI值為:</span>
+                      <br><br>
+                      <p class="p01">
+                       體重(kg):
+                       <input type="text" id="weight" name="weight">
+                      </p>
+                      <p class="p01">
+                       身高(cm):
+                       <input type="text" id="height" name="height">
+                      </p>
+                      <p class="p01">
+                       <button onclick="math()">計算</button>
+                      </p>
+                      <p style="width:20%;display:inline-block;margin-left:-130px;">
+                       BMI:
+                       <input type="text" id="result">
+                      </p>
+                    </span>
+                  </div>
+                </p>
+              </div>
+            </div>
+         </div>
+       </div>
+     </div>
+     <br><br>
+     <div class="div02" style="border:none;margin-left:38%;">
+       <img src="https://9akztym15btiu59v3hfw4w-on.drv.tw/HW-06/123.png" alt="BMI圖">
+     </div>
+   </main>
+   <footer>
+     <p class="text-center  text-muted">
+       Updated on <time>06/16</time> by 徐瑋辰
+     </p>
+   </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
